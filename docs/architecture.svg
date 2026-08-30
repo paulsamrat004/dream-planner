@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+<style>
+.box{fill:#f7f7f7;stroke:#333;stroke-width:2;rx:12;ry:12}.title{font:700 20px Arial}.text{font:16px Arial}.small{font:14px Arial}.arrow{stroke:#333;stroke-width:2;marker-end:url(#m)}
+</style>
+<defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker></defs>
+<text x="600" y="35" text-anchor="middle" class="title">AI Financial Dream &amp; Goal Planner — Architecture / DFD</text>
+<rect x="470" y="60" width="260" height="70" class="box"/><text x="600" y="90" text-anchor="middle" class="title">User</text><text x="600" y="115" text-anchor="middle" class="text">Salary + goals + profile</text>
+<rect x="440" y="165" width="320" height="80" class="box"/><text x="600" y="195" text-anchor="middle" class="title">HTML / CSS / JavaScript UI</text><text x="600" y="220" text-anchor="middle" class="text">Simple local web interface</text>
+<rect x="440" y="285" width="320" height="80" class="box"/><text x="600" y="315" text-anchor="middle" class="title">FastAPI</text><text x="600" y="340" text-anchor="middle" class="text">/plan /agent/plan /rag/query /salary/predict</text>
+<line x1="600" y1="130" x2="600" y2="165" class="arrow"/><line x1="600" y1="245" x2="600" y2="285" class="arrow"/>
+<rect x="50" y="420" width="260" height="105" class="box"/><text x="180" y="450" text-anchor="middle" class="title">Salary ML Tool</text><text x="180" y="475" text-anchor="middle" class="text">Linear Regression</text><text x="180" y="498" text-anchor="middle" class="text">Decision Tree</text><text x="180" y="521" text-anchor="middle" class="text">Gradient Boosting</text>
+<rect x="350" y="420" width="260" height="105" class="box"/><text x="480" y="450" text-anchor="middle" class="title">Financial Planner</text><text x="480" y="475" text-anchor="middle" class="text">Future cost • SIP/Investment</text><text x="480" y="498" text-anchor="middle" class="text">Feasibility • Surplus/Shortfall</text><text x="480" y="521" text-anchor="middle" class="text">6% inflation</text>
+<rect x="650" y="420" width="220" height="105" class="box"/><text x="760" y="450" text-anchor="middle" class="title">Agent</text><text x="760" y="475" text-anchor="middle" class="text">Parses request</text><text x="760" y="498" text-anchor="middle" class="text">Selects tools</text><text x="760" y="521" text-anchor="middle" class="text">Does not calculate formulas</text>
+<rect x="910" y="420" width="240" height="105" class="box"/><text x="1030" y="450" text-anchor="middle" class="title">Local RAG</text><text x="1030" y="475" text-anchor="middle" class="text">3 local documents</text><text x="1030" y="498" text-anchor="middle" class="text">Local vector index</text><text x="1030" y="521" text-anchor="middle" class="text">Grounded answers</text>
+<line x1="520" y1="365" x2="180" y2="420" class="arrow"/><line x1="580" y1="365" x2="480" y2="420" class="arrow"/><line x1="640" y1="365" x2="760" y2="420" class="arrow"/><line x1="680" y1="365" x2="1030" y2="420" class="arrow"/>
+<rect x="90" y="620" width="260" height="80" class="box"/><text x="220" y="650" text-anchor="middle" class="title">Data</text><text x="220" y="675" text-anchor="middle" class="text">salary_data.csv</text><text x="220" y="695" text-anchor="middle" class="small">city_goal_costs.csv</text>
+<rect x="470" y="620" width="260" height="80" class="box"/><text x="600" y="650" text-anchor="middle" class="title">Model Artifact</text><text x="600" y="675" text-anchor="middle" class="text">salary_model.joblib</text>
+<rect x="850" y="620" width="260" height="80" class="box"/><text x="980" y="650" text-anchor="middle" class="title">RAG Knowledge</text><text x="980" y="675" text-anchor="middle" class="text">rag/documents/*.txt</text>
+<line x1="180" y1="525" x2="220" y2="620" class="arrow"/><line x1="180" y1="525" x2="600" y2="620" class="arrow"/><line x1="1030" y1="525" x2="980" y2="620" class="arrow"/>
+<text x="600" y="770" text-anchor="middle" class="small">Primary financial salary = user-entered salary. ML prediction is reference-only when salary is supplied.</text>
+</svg>

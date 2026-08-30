@@ -1,0 +1,11 @@
+Financial Dream Planner Guidelines
+
+This project is an educational financial-planning simulation for fresher students.
+The system should show assumptions clearly and should not guarantee financial outcomes.
+Users should compare available monthly saving capacity with the monthly amount required by their goals.
+If the required amount is larger than capacity, the system should display the shortfall rather than hiding it.
+
+Project inflation assumption:
+Use 6% annual inflation for future goal-cost calculations.
+
+The system should calculate Marriage, Car and Home separately before presenting a combined total.

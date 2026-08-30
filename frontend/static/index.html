@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Dream Planner</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">💰</span>
+      <div>
+        <strong>Financial Dream Planner</strong>
+        <small>AI-powered goal planning</small>
+      </div>
+    </div>
+    <span class="tag">Educational Project</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">PLAN YOUR FUTURE</p>
+        <h1>Turn your salary into a realistic dream plan.</h1>
+        <p>Enter a few details. Your entered salary is used to calculate future goal costs, investment needs, affordability, and recommendations.</p>
+      </div>
+    </section>
+
+    <form id="plannerForm">
+      <section class="panel">
+        <div class="section-head">
+          <span class="step">1</span>
+          <div>
+            <h2>Your profile</h2>
+            <p>Your entered salary is used as the primary income for all financial calculations.</p>
+          </div>
+        </div>
+
+        <div class="grid three">
+          <label>Name
+            <input id="name" name="name" type="text" value="Samrat" required>
+          </label>
+
+          <label>Age
+            <input id="age" name="age" type="number" min="18" max="60" value="25" required>
+          </label>
+
+          <label>City
+            <input id="city" name="city" type="text" value="Bangalore" required>
+          </label>
+
+          <label>Education
+            <input id="education" name="education" type="text" value="B.Tech" required>
+          </label>
+
+          <label>Job role
+            <input id="job_role" name="job_role" type="text" value="Software Engineer" required>
+          </label>
+
+          <label>Area type
+            <select id="area_type" name="area_type">
+              <option value="">Default</option>
+              <option value="urban">Urban</option>
+              <option value="suburban">Suburban</option>
+              <option value="rural">Rural</option>
+            </select>
+          </label>
+
+          <label>Monthly salary (₹)
+            <input id="monthly_salary" name="monthly_salary" type="number" min="1" step="100" value="60000" required>
+          </label>
+        </div>
+
+        <div class="salary-note">
+          ✓ Your entered salary will be used for savings capacity, goal investments, surplus/shortfall, and feasibility. ML salary prediction is only an optional reference.
+        </div>
+
+        <label class="range-label">
+          How much of your salary do you want to save? <b id="saveValue">20%</b>
+          <input id="saving_percentage" name="saving_percentage" type="range" min="0" max="80" value="20">
+        </label>
+      </section>
+
+      <section class="panel goals-section">
+        <div class="section-head">
+          <span class="step">2</span>
+          <div>
+            <h2>Your goals</h2>
+            <p>Choose when you want to achieve each goal.</p>
+          </div>
+        </div>
+
+        <div class="goals-grid">
+          <!-- Marriage -->
+          <div class="goal-card">
+            <div class="goal-icon">💍</div>
+            <div class="goal-content">
+              <label for="marriage">Marriage</label>
+              <div class="goal-input-row">
+                <input id="marriage" name="marriage_years" type="number" min="1" value="5" required>
+                <span>years</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car -->
+          <div class="goal-card">
+            <div class="goal-icon">🚗</div>
+            <div class="goal-content">
+              <label for="car">Car</label>
+              <div class="goal-input-row">
+                <input id="car" name="car_years" type="number" min="1" value="4" required>
+                <span>years</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Home -->
+          <div class="goal-card">
+            <div class="goal-icon">🏠</div>
+            <div class="goal-content">
+              <label for="home">Home</label>
+              <div class="goal-input-row">
+                <input id="home" name="home_years" type="number" min="1" value="10" required>
+                <span>years</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button class="primary" type="submit">Generate my financial plan →</button>
+    </form>
+
+    <div id="message"></div>
+
+    <section id="results" class="hidden">
+      <div class="panel">
+        <div class="section-head">
+          <span class="step">3</span>
+          <div>
+            <h2>Your result</h2>
+            <p>Numbers below come from the project calculation engine.</p>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div><span>Entered salary</span><strong id="salary">—</strong><small>per month</small></div>
+          <div><span>Available capacity</span><strong id="capacity">—</strong><small>per month</small></div>
+          <div><span>Required investment</span><strong id="required">—</strong><small>per month</small></div>
+          <div><span>Surplus / shortfall</span><strong id="gap">—</strong><small>per month</small></div>
+        </div>
+
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="grid three" id="goalCards"></div>
+    </section>
+
+    <section class="note">
+      <strong>How it works</strong>
+      <p>Profile → entered salary → future cost with inflation → monthly investment → feasibility → recommendation.</p>
+      <p class="muted">This is an educational simulation, not guaranteed financial advice.</p>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

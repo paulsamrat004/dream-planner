@@ -1,0 +1,11 @@
+Goal Planning Rules
+
+For each goal, calculate the current estimated cost, inflate it to the target year, and then calculate the approximate monthly investment required to reach that future amount.
+
+A plan can be classified as:
+Achievable: available monthly investment capacity is at least the required monthly investment.
+Challenging: required investment is above capacity but no more than 1.5 times capacity.
+Highly Challenging: required investment is more than 1.5 times capacity.
+
+Users should be allowed to change their saving percentage or goal timeline and recalculate.
+Unrealistic results must be shown transparently.

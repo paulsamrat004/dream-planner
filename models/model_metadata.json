@@ -1,0 +1,18 @@
+{
+  "selected_model": "Gradient Boosting",
+  "available_models": [
+    "Linear Regression",
+    "Decision Tree",
+    "Gradient Boosting"
+  ],
+  "random_forest": false,
+  "target": "salary",
+  "features": [
+    "age",
+    "city",
+    "education",
+    "job_role"
+  ],
+  "training_rows": 100,
+  "selection_metric": "MAE"
+}
